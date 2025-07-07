@@ -29,5 +29,16 @@
     "title": "Time to automate your business",
     "subtitle": "Businesses lose money due to inefficient processes. We help fix this: automate, implement AI, simplify work.",
     "cta": "Get a consultation"
+  },
+  "Services": {
+    "title": "Услуги",
+    "items": [
+      "Разработка автоматизированных бизнес-процессов",
+      "Внедрение искусственного интеллекта и машинного обучения",
+      "Создание кастомных IT-решений",
+      "Разработка Telegram-ботов и mini apps",
+      "Интеграция решений и автоматизация",
+      "Консалтинг по цифровой трансформации бизнеса"
+    ]
   }
 }

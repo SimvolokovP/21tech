@@ -32,6 +32,10 @@ export type AppTranslations = {
     subtitle: string;
     cta: string;
   };
+  Services: {
+    title: string;
+    items: string[];
+  };
 };
 
 import { useTranslations as useNextIntlTranslations } from "next-intl";
