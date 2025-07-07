@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #f0f0f0;
+  --foreground: #333333;
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-lg font-medium transition-all duration-200 hover:shadow-lg transform hover:-translate-y-0.5
+}
