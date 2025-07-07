@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
   --background: #f0f0f0;
@@ -14,5 +14,9 @@
 }
 
 .btn {
-  @apply inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-lg font-medium transition-all duration-200 hover:shadow-lg transform hover:-translate-y-0.5
+  @apply inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-lg font-medium transition-all duration-200 hover:shadow-lg transform hover:-translate-y-0.5;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
