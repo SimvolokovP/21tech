@@ -30,10 +30,10 @@ export default function LocaleSwitcherToggle() {
       {["ru", "en"].map((lang) => (
         <button
           key={lang}
-          className={`px-3 py-1 rounded-md text-sm font-medium transition-colors bg-black ${
+          className={`px-3 py-1 rounded-md text-sm font-medium transition-colors bg-black text-white ${
             locale === lang
-              ? "bg-primary text-white"
-              : "text-gray-600 hover:bg-gray-100"
+              ? "cursor-not-allowed opacity-50"
+              : "bg-primary cursor-pointer"
           } ${isPending ? "opacity-50 cursor-not-allowed" : ""}`}
           disabled={isPending}
           onClick={() => switchLocale(lang)}
