@@ -24,5 +24,10 @@
   "Header": {
     "navigation": ["Cases", "Services", "Solutions", "Contacts"],
     "link": "Contact us"
+  },
+  "Hero": {
+    "title": "Time to automate your business",
+    "subtitle": "Businesses lose money due to inefficient processes. We help fix this: automate, implement AI, simplify work.",
+    "cta": "Get a consultation"
   }
 }
