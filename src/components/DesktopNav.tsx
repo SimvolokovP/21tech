@@ -10,10 +10,10 @@ export function DesktopNav({ locale }: DesktopNavProps) {
   const t = useTranslations("Header");
 
   const navigation = [
-    { text: t("navigation.0"), href: `/${locale}/cases` },
-    { text: t("navigation.1"), href: `/${locale}/services` },
-    { text: t("navigation.2"), href: `/${locale}/solutions` },
-    { text: t("navigation.3"), href: `/${locale}/contacts` },
+    { text: t("navigation.casses"), href: `/${locale}/cases` },
+    { text: t("navigation.services"), href: `/${locale}/services` },
+    { text: t("navigation.solutions"), href: `/${locale}/solutions` },
+    { text: t("navigation.contacts"), href: `/${locale}/contacts` },
   ];
 
   return (

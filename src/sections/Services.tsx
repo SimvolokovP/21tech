@@ -40,14 +40,13 @@ const iconColors = [
 const Services = () => {
   const t = useTranslations("Services");
 
-  const items = [
-    { text: t("items.0") },
-    { text: t("items.1") },
-    { text: t("items.2") },
-    { text: t("items.3") },
-    { text: t("items.4") },
-    { text: t("items.5") },
-  ];
+  const itemsObj = t.raw("items") as Record<string, string>;
+  const items = Object.keys(itemsObj)
+    .sort()
+    .map(key => itemsObj[key]);
+
+  // const items = Object.values(t("items"));
+
   return (
     <section className="w-full py-20  rounded-3xl my-12 px-4">
       <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
@@ -72,7 +71,7 @@ const Services = () => {
                 <Icon />
               </span>
               <span className="text-lg font-semibold text-gray-900">
-                {item.text}
+                {item}
               </span>
             </div>
           );

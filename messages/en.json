@@ -22,7 +22,12 @@
     "pathnames": "Pathnames"
   },
   "Header": {
-    "navigation": ["Cases", "Services", "Solutions", "Contacts"],
+    "navigation": {
+      "casses": "Casses",
+      "services": "Services",
+      "solutions": "Solutions",
+      "contacts": "Contacts"
+    },
     "link": "Contact us"
   },
   "Hero": {
@@ -32,13 +37,13 @@
   },
   "Services": {
     "title": "Услуги",
-    "items": [
-      "Разработка автоматизированных бизнес-процессов",
-      "Внедрение искусственного интеллекта и машинного обучения",
-      "Создание кастомных IT-решений",
-      "Разработка Telegram-ботов и mini apps",
-      "Интеграция решений и автоматизация",
-      "Консалтинг по цифровой трансформации бизнеса"
-    ]
+    "items": {
+      "0": "Development of automated business processes",
+      "1": "Implementation of artificial intelligence and machine learning",
+      "2": "Creation of custom IT solutions",
+      "3": "Development of Telegram bots and mini apps",
+      "4": "Integration of solutions and automation",
+      "5": "Consulting on digital business transformation"
+    }
   }
 }
