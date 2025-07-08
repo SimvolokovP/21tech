@@ -87,5 +87,20 @@
     },
     "agree": "I agree with the",
     "policy": "privacy policy"
+  },
+  "Cases": {
+    "title": "Реальные результаты для бизнеса",
+    "subtitle": "Businesses lose money due to inefficient processes. We help fix this: automate, implement AI, simplify work.",
+    "moreBtn": "Еще",
+    "casesList": {
+      "1": {
+        "title": "TapJumpers",
+        "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
+      },
+      "2": {
+        "title": "TapJumpers2",
+        "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics.Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
+      }
+    }
   }
 }

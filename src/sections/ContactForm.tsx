@@ -38,7 +38,7 @@ export function ContactForm() {
 
   return (
     <section className="w-full section-indent px-4" id="contacts">
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-12">
+      <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-6 md:gap-12">
         {/* Left column */}
         <div className="flex-1">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -64,7 +64,7 @@ export function ContactForm() {
         {/* Right column (форма) */}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex-1 bg-white shadow-md rounded-lg p-4 md:p-6 flex flex-col gap-4"
+          className="flex-1 bg-white shadow-sm rounded-lg p-4 md:p-6 flex flex-col gap-4"
         >
           <div>
             <input
