@@ -47,16 +47,20 @@ export function Header() {
         }`}
       >
         <div className="container flex items-center justify-between">
-          <Link href={`/${locale}`}>
-            <Image
-              priority
-              src="/1.png"
-              alt="21tech logo"
-              width={60}
-              height={60}
-              className="object-contain rounded-xl inline-block"
-            />
-          </Link>
+          <div className="flex items-center grow basis-0">
+            <div className="rounded-lg flex items-center justify-center overflow-hidden">
+              <Link href={`/${locale}`}>
+                <Image
+                  priority
+                  src="/1.png"
+                  alt="21tech logo"
+                  width={60}
+                  height={60}
+                  className="object-contain rounded-xl inline-block"
+                />
+              </Link>
+            </div>
+          </div>
 
           <DesktopNav locale={locale} />
 
