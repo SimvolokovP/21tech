@@ -22,5 +22,5 @@ body.menu-open {
 }
 
 .section-indent {
-  @apply pt-24 pb-[32px] md:py-32
+  @apply pt-12 pb-[32px] md:py-32
 }

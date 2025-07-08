@@ -39,7 +39,7 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 w-full flex items-center justify-between bg-white backdrop-blur-sm p-[20px] z-50 transition-transform duration-300 ${
+        className={`fixed border-b border-gray-200 top-0 left-0 right-0 w-full flex items-center justify-between bg-white backdrop-blur-sm p-[8px] z-50 transition-transform duration-300 md:p-[20px] ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
