@@ -13,7 +13,7 @@ export function MobileNav({ isOpen, onClose, locale }: MobileNavProps) {
   const t = useTranslations("Header");
 
   const navigation = [
-    { text: t("navigation.casses"), href: `/${locale}/cases` },
+    { text: t("navigation.cases"), href: `/${locale}/cases` },
     { text: t("navigation.services"), href: `/${locale}/services` },
     { text: t("navigation.solutions"), href: `/${locale}/solutions` },
     { text: t("navigation.contacts"), href: `/${locale}/contacts` },

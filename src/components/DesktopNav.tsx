@@ -2,31 +2,34 @@
 
 import { useTranslations } from "next-intl";
 
-type DesktopNavProps = {
-  locale: string;
-};
-
-export function DesktopNav({ locale }: DesktopNavProps) {
+export function DesktopNav() {
   const t = useTranslations("Header");
 
   const navigation = [
-    { text: t("navigation.casses"), href: `/${locale}/cases` },
-    { text: t("navigation.services"), href: `/${locale}/services` },
-    { text: t("navigation.solutions"), href: `/${locale}/solutions` },
-    { text: t("navigation.contacts"), href: `/${locale}/contacts` },
+    { text: t("navigation.services"), anchor: "services" },
+    { text: t("navigation.cases"), anchor: "cases" },
+    { text: t("navigation.solutions"), anchor: "solutions" },
+    { text: t("navigation.contacts"), anchor: "contacts" },
   ];
+
+  const handleScrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav className="hidden md:flex flex-1 justify-center">
       <ul className="flex space-x-8 text-gray-700 font-medium">
         {navigation.map((navLink, index) => (
-          <li key={navLink.href + index}>
-            <a
-              href={navLink.href}
+          <li key={navLink.anchor + index}>
+            <button
+              onClick={() => handleScrollToSection(navLink.anchor)}
               className="hover:text-black transition-colors text-[14px]"
             >
               {navLink.text}
-            </a>
+            </button>
           </li>
         ))}
       </ul>

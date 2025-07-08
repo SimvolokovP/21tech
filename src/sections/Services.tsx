@@ -48,7 +48,7 @@ const Services = () => {
   // const items = Object.values(t("items"));
 
   return (
-    <section className="w-full py-20  rounded-3xl my-12 px-4">
+    <section id="services" className="w-full py-20  rounded-3xl my-12 px-4">
       <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
         {t("title")}
       </h2>

@@ -1,4 +1,6 @@
+import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ContactForm } from "@/sections/ContactForm";
 import { Hero } from "@/sections/Hero";
 import Services from "@/sections/Services";
 import { Locale } from "next-intl";
@@ -25,9 +27,12 @@ export default function IndexPage({ params }: Props) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <Hero />
           <Services />
+          <section id="contacts">
+            <ContactForm />
+          </section>
         </div>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

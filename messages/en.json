@@ -12,7 +12,7 @@
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, ru {ru Russian} en {🇺🇸 English} other {Unknown}}"
+    "locale": "{locale, select, ru {Russian} en {English} other {Unknown}}"
   },
   "Manifest": {
     "name": "next-intl example"
@@ -23,10 +23,10 @@
   },
   "Header": {
     "navigation": {
-      "casses": "Casses",
+      "cases": "Cases",
       "services": "Services",
       "solutions": "Solutions",
-      "contacts": "Contacts"
+      "contacts": "Contact us"
     },
     "link": "Contact us"
   },
@@ -36,14 +36,56 @@
     "cta": "Get a consultation"
   },
   "Services": {
-    "title": "Услуги",
+    "title": "Services",
     "items": {
       "0": "Development of automated business processes",
-      "1": "Implementation of artificial intelligence and machine learning",
-      "2": "Creation of custom IT solutions",
-      "3": "Development of Telegram bots and mini apps",
-      "4": "Integration of solutions and automation",
-      "5": "Consulting on digital business transformation"
+      "1": "Implementation of AI and machine learning",
+      "2": "Custom IT solutions development",
+      "3": "Telegram bots and mini apps",
+      "4": "Solutions integration and automation",
+      "5": "Digital business transformation consulting"
     }
+  },
+  "Contacts": {
+    "email": "hello@21tech.agency",
+    "telegram": "@twentyone_tech"
+  },
+  "ContactsForm": {
+    "title": "Let's discuss your project",
+    "subtitle": "Leave your contacts and we'll get back to you within a day.",
+    "or": "Or contact us directly:",
+    "button": "Submit",
+    "telegram": "Contact us on Telegram",
+    "fields": {
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Project description"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "email@example.com",
+      "phone": "+1 123 456 7890",
+      "message": "Tell us about your task..."
+    },
+    "validation": {
+      "name": {
+        "min": "Name must be at least 2 characters."
+      },
+      "email": {
+        "invalid": "Please enter a valid email."
+      },
+      "phone": {
+        "invalid": "Invalid phone number."
+      },
+      "message": {
+        "min": "Message must be at least 10 characters."
+      },
+      "agree": {
+        "required": "You must agree to the privacy policy."
+      }
+    },
+    "agree": "I agree with the",
+    "policy": "privacy policy"
   }
 }

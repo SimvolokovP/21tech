@@ -6,7 +6,6 @@ import { BurgerButton } from "./BurgerButton";
 import Link from "next/link";
 import Image from "next/image";
 import LocaleSwitcherToggle from "./LocaleSwithcerToggle";
-import { useAppTranslations } from "@/hooks/useAppTranslations";
 import { MobileNav } from "./MobileNav";
 import { DesktopNav } from "./DesktopNav";
 
@@ -16,8 +15,6 @@ export function Header() {
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const locale = useLocale();
-
-  const t = useAppTranslations("Header");
 
   const controlHeader = () => {
     const currentScrollY = window.scrollY;
@@ -62,17 +59,11 @@ export function Header() {
             </div>
           </div>
 
-          <DesktopNav locale={locale} />
+          <DesktopNav />
 
           <div className="flex items-center gap-[8px] grow basis-0 justify-end text-right">
             <div className="hidden md:flex gap-[8px]">
               <LocaleSwitcherToggle />
-              <a
-                href="mailto:hello@21tech.agency"
-                className={`bg-black text-white px-5 py-2 rounded-lg font-semibold `}
-              >
-                {t("link")}
-              </a>
             </div>
             <BurgerButton
               isOpen={isMenuOpen}
