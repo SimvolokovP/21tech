@@ -28,7 +28,7 @@ export function Cases() {
   }, [t]);
 
   return (
-    <section id="cases" className="w-full py-20 rounded-3xl my-12 px-4">
+    <section id="cases" className="w-full rounded-3xl section-indent px-4">
       <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
         {t("title")}
       </h2>
