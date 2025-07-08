@@ -6,18 +6,25 @@ import LocaleSwitcherToggle from "./LocaleSwithcerToggle";
 type MobileNavProps = {
   isOpen: boolean;
   onClose: () => void;
-  locale: string;
 };
 
-export function MobileNav({ isOpen, onClose, locale }: MobileNavProps) {
+export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const t = useTranslations("Header");
 
   const navigation = [
-    { text: t("navigation.cases"), href: `/${locale}/cases` },
-    { text: t("navigation.services"), href: `/${locale}/services` },
-    { text: t("navigation.solutions"), href: `/${locale}/solutions` },
-    { text: t("navigation.contacts"), href: `/${locale}/contacts` },
+    { text: t("navigation.services"), anchor: "services" },
+    { text: t("navigation.cases"), anchor: "cases" },
+    { text: t("navigation.solutions"), anchor: "solutions" },
+    { text: t("navigation.contacts"), anchor: "contacts" },
   ];
+
+  const handleScrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    onClose();
+  };
 
   return (
     <div
@@ -27,14 +34,13 @@ export function MobileNav({ isOpen, onClose, locale }: MobileNavProps) {
     >
       <nav className="flex flex-col space-y-6">
         {navigation.map((navLink, index) => (
-          <a
-            key={navLink.href + index}
-            href={navLink.href}
-            className="text-2xl font-medium hover:text-black transition-colors"
-            onClick={onClose}
+          <button
+            key={index}
+            onClick={() => handleScrollToSection(navLink.anchor)}
+            className="hover:text-black transition-colors text-[14px]"
           >
             {navLink.text}
-          </a>
+          </button>
         ))}
       </nav>
       <div className="flex gap-[8px]">

@@ -37,7 +37,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="w-full py-20 px-4">
+    <section className="w-full section-indent px-4" id="contacts">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-12">
         {/* Left column */}
         <div className="flex-1">
@@ -64,7 +64,7 @@ export function ContactForm() {
         {/* Right column (форма) */}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex-1 bg-white shadow-md rounded-lg p-6 flex flex-col gap-4"
+          className="flex-1 bg-white shadow-md rounded-lg p-4 md:p-6 flex flex-col gap-4"
         >
           <div>
             <input
@@ -118,7 +118,7 @@ export function ContactForm() {
           </div>
 
           <div>
-            <label className="flex items-center gap-2 text-sm text-gray-500">
+            <label className="flex items-center gap-2 text-gray-500 text-xs md:text-sm">
               <input
                 type="checkbox"
                 {...register("agree")}
@@ -144,7 +144,7 @@ export function ContactForm() {
             )}
           </div>
 
-          <button type="submit" disabled={!isValid || !agree} className="btn">
+          <button type="submit" disabled={!isValid || !agree} className="btn text-sm md:text-base">
             {t("title") || "Давайте обсудим ваш проект"}
           </button>
         </form>

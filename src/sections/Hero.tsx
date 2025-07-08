@@ -6,7 +6,7 @@ export function Hero() {
   const t = useAppTranslations("Hero");
 
   return (
-    <section className="w-full text-center py-24 md:py-32 after:block after:w-full">
+    <section className="w-full text-center section-indent after:block after:w-full">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-700">
           {t("title")}

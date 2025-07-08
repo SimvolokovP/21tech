@@ -7,10 +7,10 @@ const Footer = () => {
     const t = useTranslations("Contacts")
 
   return (
-    <footer className="w-full py-12 border-t border-gray-200 mt-12">
+    <footer className="w-full py-12 border-t border-gray-200 mt-6 md:mt-12">
       <div className="flex flex-col md:flex-row justify-between items-center container">
         <div className="text-gray-500 mb-4 md:mb-0">&copy; 2025 21tech</div>
-        <div className="flex space-x-6">
+        <div className="flex space-x-6 flex-wrap">
           <a
             href={`mailto:${t("email")}`}
             className="text-gray-600 hover:text-gray-900 transition-colors flex items-center"

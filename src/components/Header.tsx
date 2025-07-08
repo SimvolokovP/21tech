@@ -72,11 +72,7 @@ export function Header() {
           </div>
         </div>
       </header>
-      <MobileNav
-        isOpen={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
-        locale={locale}
-      />
+      <MobileNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>
   );
 }

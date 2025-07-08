@@ -48,8 +48,8 @@ const Services = () => {
   // const items = Object.values(t("items"));
 
   return (
-    <section id="services" className="w-full py-20  rounded-3xl my-12 px-4">
-      <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+    <section id="services" className="w-full rounded-3xl section-indent px-4">
+      <h2 className="text-3xl font-bold text-gray-900 mb-6 md:mb-12 text-center">
         {t("title")}
       </h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
