@@ -1,9 +1,7 @@
-"use client";
+import { getTranslations } from "next-intl/server";
 
-import { useAppTranslations } from "@/hooks/useAppTranslations";
-
-export function Hero() {
-  const t = useAppTranslations("Hero");
+export async function Hero() {
+  const t = await getTranslations("Hero");
 
   return (
     <section className="w-full text-center section-indent after:block after:w-full">

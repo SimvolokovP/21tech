@@ -1,5 +1,4 @@
-"use client";
-
+import { getTranslations } from "next-intl/server";
 import {
   HiOutlineLightningBolt,
   HiOutlineChip,
@@ -8,7 +7,7 @@ import {
   HiOutlineCog,
   HiOutlineAdjustments,
 } from "react-icons/hi";
-import { useTranslations } from "use-intl";
+
 
 const icons = [
   HiOutlineLightningBolt,
@@ -37,13 +36,13 @@ const iconColors = [
   "text-gray-600",
 ];
 
-const Services = () => {
-  const t = useTranslations("Services");
+const Services = async () => {
+  const t = await getTranslations("Services");
 
   const itemsObj = t.raw("items") as Record<string, string>;
   const items = Object.keys(itemsObj)
     .sort()
-    .map(key => itemsObj[key]);
+    .map((key) => itemsObj[key]);
 
   // const items = Object.values(t("items"));
 
