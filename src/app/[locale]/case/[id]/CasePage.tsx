@@ -11,18 +11,22 @@ export default function CasePage() {
 
   useEffect(() => {
     if (!params?.id) return;
-    
+
     const translatedCases = updateCasesWithTranslations();
-    setCaseData(translatedCases.find(c => c.id.toString() === params.id) || null);
+    setCaseData(
+      translatedCases.find((c) => c.id.toString() === params.id) || null
+    );
     // eslint-disable-next-line
   }, [params?.id]);
 
   if (!caseData) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>{caseData.title}</h1>
-      <p>{caseData.descr}</p>
-    </div>
+    <section className="section-indent">
+      <div>
+        <h1>{caseData.title}</h1>
+        <p>{caseData.descr}</p>
+      </div>
+    </section>
   );
 }
