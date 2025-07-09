@@ -11,10 +11,11 @@ export const CASE_CARDS: ICaseCard[] = [
   },
   {
     id: 2,
-    title: "TapJumpers2",
+    title: "Погремуха",
     descr: "descr2",
-    type: "landing",
+    type: "e-commerce",
     mainImage: `/cases/2/mainImage.jpg`,
+    hoverImage: "/cases/2/hoverImage.jpg"
   },
   {
     id: 3,
