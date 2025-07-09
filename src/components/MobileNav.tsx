@@ -23,6 +23,9 @@ export function MobileNav({ isOpen }: MobileNavProps) {
 				isOpen ? 'translate-x-0' : 'translate-x-full'
 			}`}
 		>
+			<div className='mb-6'>
+				<LocaleSwitcherToggle />
+			</div>
 			<nav className='flex flex-col space-y-6'>
 				{navigation.map((navLink, index) => (
 					<Link key={index} href={`/${navLink.href}`}>
@@ -32,15 +35,6 @@ export function MobileNav({ isOpen }: MobileNavProps) {
 					</Link>
 				))}
 			</nav>
-			<div className='flex gap-[8px]'>
-				<LocaleSwitcherToggle />
-				<a
-					href='mailto:hello@21tech.agency'
-					className={`bg-black text-white px-5 py-2 rounded-lg font-semibold `}
-				>
-					{t('link')}
-				</a>
-			</div>
 		</div>
 	)
 }
