@@ -49,10 +49,10 @@ export function Header() {
               <Link href={`/${locale}`}>
                 <Image
                   priority
-                  src="/1.png"
+                  src="/logo.png"
                   alt="21tech logo"
-                  width={60}
-                  height={60}
+                  width={50}
+                  height={50}
                   className="object-contain rounded-xl inline-block"
                 />
               </Link>
