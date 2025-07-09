@@ -14,7 +14,7 @@ export default function CasePage() {
     
     const translatedCases = updateCasesWithTranslations();
     setCaseData(translatedCases.find(c => c.id.toString() === params.id) || null);
-  }, [params?.id]);
+  }, [params?.id, updateCasesWithTranslations]);
 
   if (!caseData) return <div>Loading...</div>;
 

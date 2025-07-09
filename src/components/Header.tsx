@@ -16,22 +16,21 @@ export function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const locale = useLocale()
 
-	const controlHeader = () => {
-		const currentScrollY = window.scrollY
-
-		if (currentScrollY > lastScrollY && scrollDirection !== 'down') {
-			setScrollDirection('down')
-			setIsVisible(false)
-			setIsMenuOpen(false)
-		} else if (currentScrollY < lastScrollY && scrollDirection !== 'up') {
-			setScrollDirection('up')
-			setIsVisible(true)
-		}
-
-		setLastScrollY(currentScrollY)
-	}
-
 	useEffect(() => {
+		const controlHeader = () => {
+			const currentScrollY = window.scrollY
+
+			if (currentScrollY > lastScrollY && scrollDirection !== 'down') {
+				setScrollDirection('down')
+				setIsVisible(false)
+				setIsMenuOpen(false)
+			} else if (currentScrollY < lastScrollY && scrollDirection !== 'up') {
+				setScrollDirection('up')
+				setIsVisible(true)
+			}
+
+			setLastScrollY(currentScrollY)
+		}
 		window.addEventListener('scroll', controlHeader)
 		return () => window.removeEventListener('scroll', controlHeader)
 	}, [lastScrollY, scrollDirection])

@@ -13,7 +13,7 @@ export function Cases() {
 
   useEffect(() => {
     setCases(updateCasesWithTranslations());
-  }, []);
+  }, [updateCasesWithTranslations]);
 
   return (
     <section id="cases" className="w-full rounded-3xl section-indent px-4">
