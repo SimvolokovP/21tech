@@ -102,5 +102,9 @@
         "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics.Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
       }
     }
+  },
+  "AllCases": {
+    "title": "Все кейсы",
+    "subtitle": "Все кейсы"
   }
 }

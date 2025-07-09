@@ -4,15 +4,16 @@ import { useCaseTranslations } from "@/hooks/useCaseTranslations";
 import { ICaseCard } from "@/models/ICaseCard";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useTranslations } from "use-intl";
+import { useLocale, useTranslations } from "use-intl";
 
 export function Cases() {
   const [cases, setCases] = useState<ICaseCard[]>([]);
   const { updateCasesWithTranslations } = useCaseTranslations();
   const t = useTranslations("Cases");
+  const locale = useLocale();
 
   useEffect(() => {
-    setCases(updateCasesWithTranslations());
+    setCases(updateCasesWithTranslations().slice(0, 4));
     // eslint-disable-next-line
   }, []);
 
@@ -26,7 +27,7 @@ export function Cases() {
       </p>
       <CasesList cases={cases} />
       <div className="w-full flex justify-center">
-        <Link href={"/"}>
+        <Link href={`/${locale}/all`}>
           <button className="btn">{t("moreBtn")}</button>
         </Link>
       </div>

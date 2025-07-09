@@ -1,4 +1,4 @@
-type CaseCardType = "landing" | "tma";
+export type CaseCardType = "landing" | "tma" | "bot" | "e-commerce";
 
 export interface ICaseCard {
   id: number;

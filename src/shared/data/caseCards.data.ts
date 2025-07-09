@@ -16,4 +16,34 @@ export const CASE_CARDS: ICaseCard[] = [
     type: "landing",
     mainImage: `/cases/2/mainImage.jpg`,
   },
+  {
+    id: 3,
+    title: "TapJumpers",
+    descr: "descr",
+    type: "tma",
+    mainImage: `/cases/1/mainImage.jpg`,
+    hoverImage: "/cases/1/hoverImage.png"
+  },
+  {
+    id: 4,
+    title: "TapJumpers2",
+    descr: "descr2",
+    type: "landing",
+    mainImage: `/cases/2/mainImage.jpg`,
+  },
+  {
+    id: 5,
+    title: "TapJumpers",
+    descr: "descr",
+    type: "tma",
+    mainImage: `/cases/1/mainImage.jpg`,
+    hoverImage: "/cases/1/hoverImage.png"
+  },
+  {
+    id: 6,
+    title: "TapJumpers2",
+    descr: "descr2",
+    type: "landing",
+    mainImage: `/cases/2/mainImage.jpg`,
+  },
 ];
