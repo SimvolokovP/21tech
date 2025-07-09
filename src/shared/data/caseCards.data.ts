@@ -7,6 +7,7 @@ export const CASE_CARDS: ICaseCard[] = [
     descr: "descr",
     type: "tma",
     mainImage: `/cases/1/mainImage.jpg`,
+    hoverImage: "/cases/1/hoverImage.png"
   },
   {
     id: 2,
