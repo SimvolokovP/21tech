@@ -1,5 +1,5 @@
 import { ICaseCard } from "@/models/ICaseCard";
-import Image from 'next/image'
+import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "use-intl";
 
@@ -19,6 +19,7 @@ export function CasesItem({ caseCard }: CasesItemProps) {
         <div className="relative h-[272px]">
           {caseCard.mainImage && (
             <Image
+              fill
               className="absolute top-0 object-cover w-full h-full rounded-t-2xl"
               src={caseCard.mainImage}
               alt={caseCard.title}

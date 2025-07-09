@@ -14,7 +14,8 @@ export default function CasePage() {
     
     const translatedCases = updateCasesWithTranslations();
     setCaseData(translatedCases.find(c => c.id.toString() === params.id) || null);
-  }, [params?.id, updateCasesWithTranslations]);
+    // eslint-disable-next-line
+  }, [params?.id]);
 
   if (!caseData) return <div>Loading...</div>;
 

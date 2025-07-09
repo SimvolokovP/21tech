@@ -13,7 +13,8 @@ export function Cases() {
 
   useEffect(() => {
     setCases(updateCasesWithTranslations());
-  }, [updateCasesWithTranslations]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <section id="cases" className="w-full rounded-3xl section-indent px-4">
