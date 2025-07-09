@@ -1,7 +1,14 @@
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { NO_INDEX_PAGE } from "@/constans/ceo.constans";
 import { AllCases } from "@/sections/AllCases";
 import { ContactForm } from "@/sections/ContactForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "All cases",
+  ...NO_INDEX_PAGE,
+};
 
 export default function Page() {
   return (
