@@ -1,36 +1,29 @@
-import { useTranslations } from "next-intl";
+import { Link } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 
 export function DesktopNav() {
-  const t = useTranslations("Header");
+	const t = useTranslations('Header')
 
-  const navigation = [
-    { text: t("navigation.services"), anchor: "services" },
-    { text: t("navigation.cases"), anchor: "cases" },
-    { text: t("navigation.solutions"), anchor: "solutions" },
-    { text: t("navigation.contacts"), anchor: "contacts" },
-  ];
+	const navigation = [
+		{ text: t('navigation.services'), href: '/services' },
+		{ text: t('navigation.cases'), href: '/cases' },
+		{ text: t('navigation.solutions'), href: '/solutions' },
+		{ text: t('navigation.contacts'), href: '/contact-us' },
+	]
 
-  const handleScrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  return (
-    <nav className="hidden md:flex flex-1 justify-center">
-      <ul className="flex space-x-8 text-gray-700 font-medium">
-        {navigation.map((navLink, index) => (
-          <li key={navLink.anchor + index}>
-            <button
-              onClick={() => handleScrollToSection(navLink.anchor)}
-              className="hover:text-black transition-colors text-[14px]"
-            >
-              {navLink.text}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
+	return (
+		<nav className='hidden md:flex flex-1 justify-center'>
+			<ul className='flex space-x-8 text-gray-700 font-medium'>
+				{navigation.map((navLink, index) => (
+					<Link key={index} href={`/${navLink.href}`}>
+						<li>
+							<span className='hover:text-black transition-colors text-[14px] cursor-pointer'>
+								{navLink.text}
+							</span>
+						</li>
+					</Link>
+				))}
+			</ul>
+		</nav>
+	)
 }
