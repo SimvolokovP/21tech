@@ -1,16 +1,22 @@
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { NO_INDEX_PAGE } from "@/constans/ceo.constans";
 import { Cases } from "@/sections/Casses";
 import { ContactForm } from "@/sections/ContactForm";
 import { Hero } from "@/sections/Hero";
 import Services from "@/sections/Services";
+import { Metadata } from "next";
 import { Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-// import PageLayout from '@/components/PageLayout';
 
 type Props = {
   params: Promise<{ locale: Locale }>;
+};
+
+export const metadata: Metadata = {
+  title: "21Tech",
+  ...NO_INDEX_PAGE,
 };
 
 export default function IndexPage({ params }: Props) {

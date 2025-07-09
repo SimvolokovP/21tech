@@ -1,31 +1,19 @@
 "use client";
 import { CasesList } from "@/components/CasesList";
+import { useCaseTranslations } from "@/hooks/useCaseTranslations";
 import { ICaseCard } from "@/models/ICaseCard";
-import { CASE_CARDS } from "@/shared/data/caseCards.data";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTranslations } from "use-intl";
 
 export function Cases() {
   const [cases, setCases] = useState<ICaseCard[]>([]);
+  const { updateCasesWithTranslations } = useCaseTranslations();
   const t = useTranslations("Cases");
 
   useEffect(() => {
-    const updateCasesWithTranslations = () => {
-      const translatedCases = CASE_CARDS.map((card) => {
-        const caseTranslations = t.raw(`casesList.${card.id}`);
-        return {
-          ...card,
-          title: caseTranslations?.title || card.title,
-          descr: caseTranslations?.descr || card.descr,
-        };
-      });
-      setCases(translatedCases);
-      console.log(translatedCases);
-    };
-
-    updateCasesWithTranslations();
-  }, [t]);
+    setCases(updateCasesWithTranslations());
+  }, []);
 
   return (
     <section id="cases" className="w-full rounded-3xl section-indent px-4">
