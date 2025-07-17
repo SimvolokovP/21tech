@@ -1,10 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f0f0f0;
-  --foreground: #333333;
+  /* Минималистичная технологичная палитра */
+  --background: #fafafa;
+  --foreground: #1a1a1a;
   --color-background: #ffffff;
   --color-foreground: #000000;
+  
+  /* Фиолетовые акценты */
+  --primary: #7c3aed; /* violet-600 */
+  --primary-light: #a78bfa; /* violet-400 */
+  --primary-dark: #5b21b6; /* violet-800 */
+  
+  /* Технологичная сетка */
+  --grid-color: rgba(124, 58, 237, 0.05);
+}
+
+/* Технологичный фон с сеткой */
+body {
+  background: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-attachment: fixed, fixed, scroll;
 }
 
 .container {
@@ -13,8 +32,13 @@
   padding: 0 20px;
 }
 
+/* Обновленная кнопка с фиолетовыми акцентами */
 .btn {
-  @apply inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-lg font-medium transition-all duration-200 hover:shadow-lg transform hover:-translate-y-0.5;
+  @apply inline-flex items-center justify-center bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/25 transform hover:-translate-y-1 hover:scale-105;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center bg-white border-2 border-violet-200 text-violet-600 px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:bg-violet-50 hover:border-violet-300;
 }
 
 body.menu-open {
@@ -22,5 +46,24 @@ body.menu-open {
 }
 
 .section-indent {
-  @apply pt-12 pb-[32px] md:py-32
+  @apply pt-16 pb-16 md:pt-24 md:pb-24;
+}
+
+/* Технологичные эффекты */
+.tech-glow {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
+}
+
+.tech-border {
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+/* Анимация для технологичных элементов */
+@keyframes pulse-tech {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.pulse-tech {
+  animation: pulse-tech 2s ease-in-out infinite;
 }
