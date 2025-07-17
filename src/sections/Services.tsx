@@ -27,64 +27,49 @@ const Services = async () => {
     .map((key) => itemsObj[key]);
 
   return (
-    <section id="services" className="w-full section-indent px-4 relative">
-      {/* Фоновая сетка */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute inset-0" 
-             style={{
-               backgroundImage: `
-                 linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
-                 linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px)
-               `,
-               backgroundSize: '60px 60px'
-             }}>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
-        {/* Заголовок */}
+    <section id="services" className="w-full section-indent px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Vercel-style заголовок */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-violet-500 to-transparent"></div>
-            <span className="text-sm font-medium text-violet-600 uppercase tracking-wider px-4 py-2 rounded-full bg-violet-50 border border-violet-200/50">
-              {t("title")}
-            </span>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-violet-500 to-transparent"></div>
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-medium text-gray-700">
+            <div className="w-2 h-2 rounded-full bg-violet-500"></div>
+            {t("title")}
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">
             Технологические решения
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto font-normal">
             Минималистичный подход к созданию эффективных IT-решений
           </p>
         </div>
 
-        {/* Сетка сервисов */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Vercel-style сетка сервисов */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, idx) => {
             const Icon = icons[idx % icons.length];
             return (
               <div
                 key={idx}
-                className="group relative bg-white/80 backdrop-blur-sm border border-violet-200/30 rounded-2xl p-8 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/10 tech-glow"
+                className="group relative bg-white border border-gray-200 rounded-xl p-8 transition-all duration-200 hover:shadow-lg vercel-border"
               >
                 {/* Иконка */}
-                <div className="flex flex-col items-center text-center">
-                  <div className="mb-8 p-6 rounded-2xl bg-gradient-to-br from-violet-50 to-purple-50 border border-violet-200/50 group-hover:from-violet-500 group-hover:to-purple-500 transition-all duration-300">
-                    <Icon size={32} strokeWidth={1.5} className="text-violet-600 group-hover:text-white transition-colors duration-300" />
+                <div className="flex flex-col items-start text-left">
+                  <div className="mb-6 p-4 rounded-lg bg-gray-50 border border-gray-200 group-hover:bg-violet-50 group-hover:border-violet-200 transition-all duration-200">
+                    <Icon size={24} strokeWidth={1.5} className="text-gray-700 group-hover:text-violet-600 transition-colors duration-200" />
                   </div>
                   
                   {/* Текст */}
-                  <h3 className="text-lg font-semibold text-gray-900 leading-tight mb-3">
+                  <h3 className="text-lg font-semibold text-black leading-tight mb-2">
                     {item}
                   </h3>
 
-                  {/* Технологичный индикатор */}
-                  <div className="w-8 h-0.5 bg-gradient-to-r from-violet-500 to-purple-500 opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Vercel-style стрелка */}
+                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-violet-600">
+                      <path d="M7 3L12 8L7 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                 </div>
-
-                {/* Декоративные элементы */}
-                <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-violet-400 opacity-50 group-hover:opacity-100 transition-opacity duration-300 pulse-tech"></div>
               </div>
             );
           })}

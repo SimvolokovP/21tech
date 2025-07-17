@@ -6,23 +6,20 @@ const Footer = () => {
   const t = useTranslations("Contacts");
 
   return (
-    <footer className="w-full py-12 border-t border-violet-200/30 mt-12 bg-gradient-to-br from-violet-50/50 to-purple-50/30 backdrop-blur-sm">
+    <footer className="w-full py-12 border-t border-gray-200 mt-12 bg-gray-50">
       <div className="flex flex-col md:flex-row justify-between items-center container">
-        <div className="text-gray-600 mb-6 flex w-full justify-start md:mb-0 font-medium">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-violet-500 pulse-tech"></div>
-            &copy; 2025 21tech
-          </div>
+        <div className="text-gray-500 mb-6 flex w-full justify-start md:mb-0 text-sm">
+          &copy; 2025 21tech
         </div>
-        <div className="flex space-x-8 flex-wrap">
+        <div className="flex space-x-6 flex-wrap">
           <a
             href={`mailto:${t("email")}`}
-            className="text-gray-600 hover:text-violet-600 transition-all duration-300 flex items-center group"
+            className="text-gray-600 hover:text-black transition-colors duration-200 flex items-center group text-sm"
           >
-            <div className="p-2 rounded-lg bg-white/80 border border-violet-200/50 mr-3 group-hover:bg-violet-500 group-hover:border-violet-500 transition-all duration-300">
+            <div className="p-2 rounded-lg bg-white border border-gray-200 mr-3 group-hover:border-violet-200 transition-all duration-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-violet-600 group-hover:text-white transition-colors duration-300"
+                className="h-4 w-4 text-gray-600 group-hover:text-violet-600 transition-colors duration-200"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -34,12 +31,12 @@ const Footer = () => {
           </a>
           <a
             href="https://t.me/twentyone_tech"
-            className="text-gray-600 hover:text-violet-600 transition-all duration-300 flex items-center group"
+            className="text-gray-600 hover:text-black transition-colors duration-200 flex items-center group text-sm"
           >
-            <div className="p-2 rounded-lg bg-white/80 border border-violet-200/50 mr-3 group-hover:bg-violet-500 group-hover:border-violet-500 transition-all duration-300">
+            <div className="p-2 rounded-lg bg-white border border-gray-200 mr-3 group-hover:border-violet-200 transition-all duration-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-violet-600 group-hover:text-white transition-colors duration-300"
+                className="h-4 w-4 text-gray-600 group-hover:text-violet-600 transition-colors duration-200"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >

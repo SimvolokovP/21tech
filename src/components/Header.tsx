@@ -38,13 +38,13 @@ export function Header() {
 	return (
 		<>
 			<header
-				className={`fixed top-0 left-0 right-0 w-full flex items-center justify-between bg-white/90 backdrop-blur-md border-b border-violet-200/30 p-[8px] z-50 transition-all duration-300 md:p-[20px] tech-glow ${
+				className={`fixed top-0 left-0 right-0 w-full flex items-center justify-between bg-white/80 backdrop-blur-md border-b border-gray-200 p-[8px] z-50 transition-all duration-300 md:p-[20px] vercel-shadow ${
 					isVisible ? 'translate-y-0' : '-translate-y-full'
 				}`}
 			>
 				<div className='container flex items-center justify-between'>
 					<div className='flex items-center grow basis-0'>
-						<div className='rounded-xl flex items-center justify-center overflow-hidden p-2 bg-gradient-to-br from-violet-50 to-purple-50 border border-violet-200/50 tech-border hover:scale-105 transition-transform duration-300'>
+						<div className='rounded-lg flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity duration-200'>
 							<Link href={`/${locale}`}>
 								<Image
 									priority

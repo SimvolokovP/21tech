@@ -27,12 +27,11 @@ export function DesktopNav() {
             <li key={index}>
               <Link href={navLink.href}>
                 <span
-                  className={`relative ${
-                    isActive ? "text-violet-600" : ""
-                  } hover:text-violet-600 transition-all duration-300 text-[14px] cursor-pointer group`}
+                  className={`${
+                    isActive ? "text-black" : ""
+                  } hover:text-black transition-colors duration-200 text-sm cursor-pointer`}
                 >
                   {navLink.text}
-                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-600 to-purple-600 transition-all duration-300 group-hover:w-full ${isActive ? 'w-full' : ''}`}></span>
                 </span>
               </Link>
             </li>
