@@ -1,39 +1,39 @@
-import { getTranslations } from "next-intl/server";
+  import { getTranslations } from "next-intl/server";
 import {
-  HiOutlineLightningBolt,
-  HiOutlineChip,
-  HiOutlinePuzzle,
-  HiOutlineChatAlt2,
-  HiOutlineCog,
-  HiOutlineAdjustments,
-} from "react-icons/hi";
+  Workflow,
+  Brain,
+  Code2,
+  Bot,
+  Settings,
+  TrendingUp,
+} from "lucide-react";
 
 
 const icons = [
-  HiOutlineLightningBolt,
-  HiOutlineChip,
-  HiOutlinePuzzle,
-  HiOutlineChatAlt2,
-  HiOutlineCog,
-  HiOutlineAdjustments,
+  Workflow,      
+  Brain,         
+  Code2,          
+  Bot,           
+  Settings,      
+  TrendingUp,    
 ];
 
 const bgColors = [
-  "bg-blue-50",
-  "bg-green-50",
-  "bg-purple-50",
-  "bg-pink-50",
-  "bg-pink-50",
-  "bg-gray-100",
+  "bg-blue-50",     
+  "bg-purple-50",   
+  "bg-emerald-50",   
+  "bg-orange-50",    
+  "bg-indigo-50",    
+  "bg-rose-50",      
 ];
 
 const iconColors = [
-  "text-blue-600",
-  "text-green-600",
-  "text-purple-600",
-  "text-pink-600",
-  "text-yellow-600",
-  "text-gray-600",
+  "text-blue-600",     
+  "text-purple-600",  
+  "text-emerald-600",  
+  "text-orange-600",   
+  "text-indigo-600",   
+  "text-rose-600",    
 ];
 
 const Services = async () => {
@@ -57,17 +57,26 @@ const Services = async () => {
           return (
             <div
               key={idx}
-              className={`group bg-white border rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center ${
+              className={`group bg-white border rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center ${
                 bgColors[idx % bgColors.length]
               }`}
-              style={{ borderColor: "hsla(0,0%,92%,1)" }}
+              style={{ 
+                borderColor: "rgba(0,0,0,0.08)",
+                background: `linear-gradient(135deg, white 60%, ${bgColors[idx % bgColors.length].includes('blue') ? '#eff6ff' : 
+                  bgColors[idx % bgColors.length].includes('purple') ? '#faf5ff' :
+                  bgColors[idx % bgColors.length].includes('emerald') ? '#ecfdf5' :
+                  bgColors[idx % bgColors.length].includes('orange') ? '#fff7ed' :
+                  bgColors[idx % bgColors.length].includes('indigo') ? '#eef2ff' : '#fff1f2'} 100%)`
+              }}
             >
               <span
-                className={`mb-4 text-4xl ${
+                className={`mb-6 p-3 rounded-xl ${
+                  bgColors[idx % bgColors.length]
+                } ${
                   iconColors[idx % iconColors.length]
-                } group-hover:scale-110 transition-transform`}
+                } group-hover:scale-110 transition-transform duration-300`}
               >
-                <Icon />
+                <Icon size={32} strokeWidth={1.5} />
               </span>
               <span className="text-lg font-semibold text-gray-900">
                 {item}
