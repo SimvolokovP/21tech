@@ -4,13 +4,20 @@ export async function Hero() {
   const t = await getTranslations("Hero");
 
   return (
-    <section className="w-full text-center section-indent relative">
-      <div className="max-w-4xl mx-auto">
+    <section className="w-full text-center section-indent relative overflow-hidden">
+      {/* Vercel-style фиолетовые блики */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-violet-400/10 to-purple-400/5 blur-2xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-gradient-to-br from-purple-400/8 to-indigo-400/4 blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-br from-violet-300/6 to-purple-300/3 blur-3xl"></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Vercel-style badge */}
-        <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-medium text-gray-700">
+        {/* <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-medium text-gray-700">
           <div className="w-2 h-2 rounded-full bg-violet-500"></div>
           Tech Innovation
-        </div>
+        </div> */}
 
         {/* Vercel-style заголовок */}
         <h1 className="text-5xl md:text-7xl font-bold mb-8 text-black leading-tight tracking-tight">

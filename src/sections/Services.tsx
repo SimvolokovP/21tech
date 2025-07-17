@@ -27,8 +27,21 @@ const Services = async () => {
     .map((key) => itemsObj[key]);
 
   return (
-    <section id="services" className="w-full section-indent px-4">
-      <div className="max-w-6xl mx-auto">
+    <section id="services" className="w-full section-indent px-4 relative">
+      {/* Vercel-style фоновая сетка */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute inset-0" 
+             style={{
+               backgroundImage: `
+                 linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+                 linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px)
+               `,
+               backgroundSize: '40px 40px'
+             }}>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Vercel-style заголовок */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-medium text-gray-700">
@@ -50,10 +63,23 @@ const Services = async () => {
             return (
               <div
                 key={idx}
-                className="group relative bg-white border border-gray-200 rounded-xl p-8 transition-all duration-200 hover:shadow-lg vercel-border"
+                className="group relative bg-white border border-gray-200 rounded-xl p-8 transition-all duration-200 hover:shadow-lg vercel-border overflow-hidden"
               >
+                {/* Дополнительная сетка внутри карточки */}
+                <div className="absolute inset-0 opacity-30 pointer-events-none">
+                  <div className="absolute inset-0" 
+                       style={{
+                         backgroundImage: `
+                           linear-gradient(rgba(124, 58, 237, 0.02) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(124, 58, 237, 0.02) 1px, transparent 1px)
+                         `,
+                         backgroundSize: '20px 20px'
+                       }}>
+                  </div>
+                </div>
+
                 {/* Иконка */}
-                <div className="flex flex-col items-start text-left">
+                <div className="flex flex-col items-start text-left relative z-10">
                   <div className="mb-6 p-4 rounded-lg bg-gray-50 border border-gray-200 group-hover:bg-violet-50 group-hover:border-violet-200 transition-all duration-200">
                     <Icon size={24} strokeWidth={1.5} className="text-gray-700 group-hover:text-violet-600 transition-colors duration-200" />
                   </div>

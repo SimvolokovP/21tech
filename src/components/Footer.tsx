@@ -6,8 +6,21 @@ const Footer = () => {
   const t = useTranslations("Contacts");
 
   return (
-    <footer className="w-full py-12 border-t border-gray-200 mt-12 bg-gray-50">
-      <div className="flex flex-col md:flex-row justify-between items-center container">
+    <footer className="w-full py-12 border-t border-gray-200 mt-12 bg-gray-50 relative overflow-hidden">
+      {/* Технологичная сетка для Footer */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0" 
+             style={{
+               backgroundImage: `
+                 linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
+                 linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px)
+               `,
+               backgroundSize: '40px 40px'
+             }}>
+        </div>
+      </div>
+      
+      <div className="flex flex-col md:flex-row justify-between items-center container relative z-10">
         <div className="text-gray-500 mb-6 flex w-full justify-start md:mb-0 text-sm">
           &copy; 2025 21tech
         </div>

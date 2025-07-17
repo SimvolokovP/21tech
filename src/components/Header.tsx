@@ -38,11 +38,23 @@ export function Header() {
 	return (
 		<>
 			<header
-				className={`fixed top-0 left-0 right-0 w-full flex items-center justify-between bg-white/80 backdrop-blur-md border-b border-gray-200 p-[8px] z-50 transition-all duration-300 md:p-[20px] vercel-shadow ${
+				className={`fixed top-0 left-0 right-0 w-full flex items-center justify-between bg-white/90 backdrop-blur-md border-b border-gray-200 p-[8px] z-50 transition-all duration-300 md:p-[20px] vercel-shadow relative overflow-hidden ${
 					isVisible ? 'translate-y-0' : '-translate-y-full'
 				}`}
 			>
-				<div className='container flex items-center justify-between'>
+				{/* Технологичная сетка для Header */}
+				<div className="absolute inset-0 opacity-10 pointer-events-none">
+					<div className="absolute inset-0" 
+						 style={{
+							 backgroundImage: `
+								 linear-gradient(rgba(124, 58, 237, 0.1) 1px, transparent 1px),
+								 linear-gradient(90deg, rgba(124, 58, 237, 0.1) 1px, transparent 1px)
+							 `,
+							 backgroundSize: '30px 30px'
+						 }}>
+					</div>
+				</div>
+				<div className='container flex items-center justify-between relative z-10'>
 					<div className='flex items-center grow basis-0'>
 						<div className='rounded-lg flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity duration-200'>
 							<Link href={`/${locale}`}>
