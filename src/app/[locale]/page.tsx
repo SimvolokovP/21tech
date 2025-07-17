@@ -5,6 +5,7 @@ import { Cases } from '@/sections/Cases'
 import { ContactForm } from '@/sections/ContactForm'
 import { Hero } from '@/sections/Hero'
 import Services from '@/sections/Services'
+import { BlogSection } from '@/sections/BlogSection'
 import { Metadata } from 'next'
 import { Locale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
@@ -35,6 +36,7 @@ export default function IndexPage({ params }: Props) {
 					<Hero />
 					<Services />
 					<Cases />
+					<BlogSection />
 					<ContactForm />
 				</div>
 			</main>

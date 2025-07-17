@@ -3,48 +3,56 @@ import { ICaseCard } from "@/models/ICaseCard";
 export const CASE_CARDS: ICaseCard[] = [
   {
     id: 1,
-    title: "TapJumpers",
-    descr: "descr",
+    title: "FinFlow",
+    descr: "finflow_descr",
     type: "tma",
-    mainImage: `/cases/1/mainImage.jpg`,
+    mainImage: `/finflow.jpg`,
     hoverImage: "/cases/1/hoverImage.png"
   },
   {
     id: 2,
-    title: "Погремуха",
-    descr: "descr2",
-    type: "e-commerce",
+    title: "TapJumpers",
+    descr: "tapjumpers_descr",
+    type: "tma",
     mainImage: `/cases/2/mainImage.jpg`,
     hoverImage: "/cases/2/hoverImage.jpg"
   },
   {
     id: 3,
-    title: "TapJumpers",
-    descr: "descr",
-    type: "tma",
-    mainImage: `/cases/1/mainImage.jpg`,
+    title: "DProxy",
+    descr: "dproxy_descr",
+    type: "landing",
+    mainImage: `/dproxy-case.png`,
     hoverImage: "/cases/1/hoverImage.png"
   },
   {
     id: 4,
-    title: "TapJumpers2",
-    descr: "descr2",
-    type: "landing",
+    title: "PredictPari",
+    descr: "predictpari_descr",
+    type: "tma",
     mainImage: `/cases/2/mainImage.jpg`,
   },
   {
     id: 5,
-    title: "TapJumpers",
-    descr: "descr",
+    title: "Panini",
+    descr: "panini_descr",
     type: "tma",
-    mainImage: `/cases/1/mainImage.jpg`,
+    mainImage: `/betboom.png`,
     hoverImage: "/cases/1/hoverImage.png"
   },
   {
     id: 6,
-    title: "TapJumpers2",
-    descr: "descr2",
-    type: "landing",
+    title: "Burger King",
+    descr: "burger_king_descr",
+    type: "bot",
     mainImage: `/cases/2/mainImage.jpg`,
+  },
+  {
+    id: 7,
+    title: "Asian Halal",
+    descr: "asian_halal_descr",
+    type: "bot",
+    mainImage: `/DurgerKing.png`,
+    hoverImage: "/cases/1/hoverImage.png"
   },
 ];

@@ -26,6 +26,7 @@
       "cases": "Кейсы",
       "services": "Услуги",
       "solutions": "Решения",
+      "blog": "Блог",
       "contacts": "Связаться"
     },
     "link": "Связаться"
@@ -94,33 +95,77 @@
     "moreBtn": "Еще",
     "casesList": {
       "1": {
-        "title": "TapJumpers",
-        "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
+        "title": "FinFlow",
+        "descr": "Создание приложения отслеживания финансов, доходов, расходов прямо в Telegram. Telegram mini app"
       },
       "2": {
-        "title": "Погремуха",
-        "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics.Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
+        "title": "TapJumpers",
+        "descr": "Создание приложения-тапалки в Telegram"
       },
       "3": {
-        "title": "ТэпЖамперс3",
-        "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
+        "title": "DProxy",
+        "descr": "Создание сайта и Telegram бота мобильных прокси"
       },
       "4": {
-        "title": "TapJumpers4",
-        "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics.Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
+        "title": "PredictWinline",
+        "descr": "Создание приложения для БК Winline по предиктам к финалу Клубного чемпионата мира с ИИ"
       },
       "5": {
-        "title": "ТэпЖамперс5",
-        "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
+        "title": "Panini",
+        "descr": "Создание футбольного приложения с карточками игроков, прогнозами на матчи, мини-играми, квизами"
       },
       "6": {
-        "title": "TapJumpers6",
-        "descr": "Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics.Get meaningful insights like Google Analytics, but 10× simpler—focused only on what drives growth, not vanity metrics."
+        "title": "Durger King App",
+        "descr": "Создание Eccomerce шаблона для ресторанов в Telegram. Клон Durger King App"
+      },
+      "7": {
+        "title": "Asian Halal",
+        "descr": "Создание приложения для ресторана доставки азиатской кухни в Telegram по шаблону Durger King App"
+      },
+
+       "8": {
+        "title": "Погремуха",
+        "descr": "Создание интернет-магазина автозвука"
       }
     }
   },
   "AllCases": {
     "title": "Все кейсы",
     "subtitle": "Все кейсы"
+  },
+  "Blog": {
+    "title": "Блог",
+    "subtitle": "Статьи о технологиях, разработке и цифровой трансформации",
+    "readMore": "Читать далее",
+    "readTime": "мин чтения",
+    "author": "Автор",
+    "publishedAt": "Опубликовано",
+    "category": "Категория",
+    "tags": "Теги",
+    "featured": "Рекомендуемые",
+    "latest": "Последние статьи",
+    "allArticles": "Все статьи",
+    "noArticles": "Статьи не найдены",
+    "categories": {
+      "telegram-bots": "Telegram боты",
+      "web-development": "Веб-разработка", 
+      "mobile-apps": "Мобильные приложения",
+      "ai-solutions": "ИИ решения",
+      "tutorials": "Туториалы"
+    }
+  },
+  "Articles": {
+    "article_1_title": "Полное руководство по созданию Telegram ботов в 2025 году",
+    "article_1_excerpt": "Изучите современные подходы к разработке Telegram ботов, от простых команд до сложной бизнес-логики с интеграцией ИИ.",
+    "article_1_content": "В этой статье мы рассмотрим полный процесс создания современного Telegram бота...",
+    "article_2_title": "Будущее Telegram Mini Apps: новые возможности для бизнеса",
+    "article_2_excerpt": "Как Telegram Mini Apps революционизируют мобильную разработку и открывают новые возможности для стартапов.",
+    "article_2_content": "Telegram Mini Apps представляют собой новую эру в разработке мобильных приложений...",
+    "article_3_title": "Интеграция ИИ в бизнес-процессы: практическое руководство",
+    "article_3_excerpt": "Пошаговое руководство по внедрению искусственного интеллекта в существующие бизнес-процессы компании.",
+    "article_3_content": "Искусственный интеллект больше не является футуристической технологией...",
+    "article_4_title": "Тренды веб-разработки 2025: что нужно знать разработчику",
+    "article_4_excerpt": "Обзор основных трендов и технологий в веб-разработке, которые будут определять индустрию в 2025 году.",
+    "article_4_content": "2025 год обещает быть переломным для веб-разработки..."
   }
 }
