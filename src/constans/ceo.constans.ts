@@ -1,2 +1,2 @@
 export const NO_INDEX_PAGE = { robots: { index: false, follow: false } };
-export const SITE_NAME = "21Tech";
+export const SITE_NAME = "21scale";

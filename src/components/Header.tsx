@@ -43,16 +43,17 @@ export function Header() {
 				}`}
 			>
 				{/* Технологичная сетка для Header */}
-				<div className="absolute inset-0 opacity-10 pointer-events-none">
-					<div className="absolute inset-0" 
-						 style={{
-							 backgroundImage: `
+				<div className='absolute inset-0 opacity-10 pointer-events-none'>
+					<div
+						className='absolute inset-0'
+						style={{
+							backgroundImage: `
 								 linear-gradient(rgba(124, 58, 237, 0.1) 1px, transparent 1px),
 								 linear-gradient(90deg, rgba(124, 58, 237, 0.1) 1px, transparent 1px)
 							 `,
-							 backgroundSize: '30px 30px'
-						 }}>
-					</div>
+							backgroundSize: '30px 30px',
+						}}
+					></div>
 				</div>
 				<div className='container flex items-center justify-between relative z-10'>
 					<div className='flex items-center grow basis-0'>
@@ -61,7 +62,7 @@ export function Header() {
 								<Image
 									priority
 									src='/logo.png'
-									alt='21tech logo'
+									alt='21scale logo'
 									width={40}
 									height={40}
 									className='object-contain rounded-lg inline-block'

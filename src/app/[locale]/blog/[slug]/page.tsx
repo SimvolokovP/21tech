@@ -1,10 +1,10 @@
-import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
-import { Metadata } from 'next';
-import { ARTICLES } from '@/shared/data/articles.data';
-import { IArticle } from '@/models/IArticle';
-import Image from 'next/image';
-import Link from 'next/link';
+import { IArticle } from '@/models/IArticle'
+import { ARTICLES } from '@/shared/data/articles.data'
+import { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 interface ArticlePageProps {
   params: {
@@ -18,12 +18,12 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   
   if (!article) {
     return {
-      title: 'Article Not Found | 21Tech',
+      title: 'Article Not Found | 21scale',
     };
   }
 
   return {
-    title: `${article.title} | 21Tech`,
+    title: `${article.title} | 21scale`,
     description: article.excerpt,
   };
 }

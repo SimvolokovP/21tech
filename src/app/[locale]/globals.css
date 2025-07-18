@@ -1,115 +1,117 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  /* Vercel-style с фиолетовыми акцентами */
-  --background: #fafafa;
-  --foreground: #000000;
-  --color-background: #ffffff;
-  --color-foreground: #000000;
-  
-  /* Фиолетовые акценты в стиле Vercel */
-  --primary: #7c3aed; /* violet-600 */
-  --primary-light: #a78bfa; /* violet-400 */
-  --primary-dark: #5b21b6; /* violet-800 */
-  
-  /* Vercel gray scale */
-  --gray-50: #fafafa;
-  --gray-100: #f4f4f5;
-  --gray-200: #e4e4e7;
-  --gray-300: #d4d4d8;
-  --gray-400: #a1a1aa;
-  --gray-500: #71717a;
-  --gray-600: #52525b;
-  --gray-700: #3f3f46;
-  --gray-800: #27272a;
-  --gray-900: #18181b;
+	/* Vercel-style с фиолетовыми акцентами */
+	--background: #fafafa;
+	--foreground: #000000;
+	--color-background: #ffffff;
+	--color-foreground: #000000;
+
+	/* Фиолетовые акценты в стиле Vercel */
+	--primary: #7c3aed; /* violet-600 */
+	--primary-light: #a78bfa; /* violet-400 */
+	--primary-dark: #5b21b6; /* violet-800 */
+
+	/* Vercel gray scale */
+	--gray-50: #fafafa;
+	--gray-100: #f4f4f5;
+	--gray-200: #e4e4e7;
+	--gray-300: #d4d4d8;
+	--gray-400: #a1a1aa;
+	--gray-500: #71717a;
+	--gray-600: #52525b;
+	--gray-700: #3f3f46;
+	--gray-800: #27272a;
+	--gray-900: #18181b;
 }
 
 /* Vercel-style чистый фон с технологичной сеткой */
 body {
-  background: 
-    linear-gradient(rgba(124, 58, 237, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124, 58, 237, 0.02) 1px, transparent 1px),
-    var(--background);
-  background-size: 50px 50px, 50px 50px, 100% 100%;
-  background-attachment: fixed, fixed, scroll;
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background: linear-gradient(rgba(124, 58, 237, 0.02) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(124, 58, 237, 0.02) 1px, transparent 1px),
+		var(--background);
+	background-size: 50px 50px, 50px 50px, 100% 100%;
+	background-attachment: fixed, fixed, scroll;
+	color: var(--foreground);
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 /* Vercel-style кнопки с фиолетовыми акцентами */
 .btn {
-  @apply inline-flex items-center justify-center bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-transparent;
+	@apply inline-flex items-center justify-center bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-transparent;
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center bg-violet-600 hover:bg-violet-700 text-white px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-transparent;
+	@apply inline-flex items-center justify-center bg-violet-600 hover:bg-violet-700 text-white px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-transparent;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-700 hover:text-black px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-gray-300;
+	@apply inline-flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-700 hover:text-black px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-gray-300;
 }
 
 .btn-ghost {
-  @apply inline-flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-600 hover:text-black px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-transparent;
+	@apply inline-flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-600 hover:text-black px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-transparent;
 }
 
 body.menu-open {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .section-indent {
-  @apply pt-16 pb-16 md:pt-24 md:pb-24;
+	@apply pt-16 pb-16 md:pt-24 md:pb-24;
 }
 
 /* Vercel-style тени */
 .vercel-shadow {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .vercel-shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .vercel-border {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Фиолетовые акценты */
 .accent-violet {
-  color: var(--primary);
+	color: var(--primary);
 }
 
 .accent-violet-bg {
-  background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 /* Line clamp utilities */
 .line-clamp-1 {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }

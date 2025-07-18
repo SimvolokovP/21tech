@@ -1,11 +1,11 @@
 import Footer from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { NO_INDEX_PAGE } from '@/constans/ceo.constans'
+import { BlogSection } from '@/sections/BlogSection'
 import { Cases } from '@/sections/Cases'
 import { ContactForm } from '@/sections/ContactForm'
 import { Hero } from '@/sections/Hero'
 import Services from '@/sections/Services'
-import { BlogSection } from '@/sections/BlogSection'
 import { Metadata } from 'next'
 import { Locale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
@@ -16,7 +16,7 @@ type Props = {
 }
 
 export const metadata: Metadata = {
-	title: '21Tech',
+	title: '21scale',
 	...NO_INDEX_PAGE,
 }
 
