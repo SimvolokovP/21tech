@@ -63,30 +63,7 @@ export function CasesItem({ caseCard }: CasesItemProps) {
 						{caseCard.descr}
 					</p>
 
-					{/* Vercel-style читать далее */}
-					<div className='mt-auto'>
-						<Link
-							href={`/${locale}/case/${caseCard.id}`}
-							className='inline-flex items-center text-sm font-medium text-violet-600 hover:text-violet-700 transition-colors duration-200'
-						>
-							Подробнее
-							<svg
-								width='16'
-								height='16'
-								viewBox='0 0 16 16'
-								fill='none'
-								className='ml-1'
-							>
-								<path
-									d='M7 3L12 8L7 13'
-									stroke='currentColor'
-									strokeWidth='1.5'
-									strokeLinecap='round'
-									strokeLinejoin='round'
-								/>
-							</svg>
-						</Link>
-					</div>
+					
 				</div>
 			</article>
 		</li>

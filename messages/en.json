@@ -24,6 +24,7 @@
 	"Header": {
 		"navigation": {
 			"cases": "Cases",
+      
 			"services": "Services",
 			"solutions": "Solutions",
 			"blog": "Blog",
@@ -34,7 +35,8 @@
 	"Hero": {
 		"title": "Time to automate your business",
 		"subtitle": "Businesses lose money due to inefficient processes. We help fix this: automate, implement AI, simplify work.",
-		"cta": "Get a consultation"
+		"cta": "Contact us",
+    "cta2": "Discuss your project"
 	},
 	"Services": {
 		"title": "Services",
@@ -93,6 +95,7 @@
     "label": "Portfolio",
 		"title": "Implemented projects",
 		"subtitle": "",
+    "more": "Learn more",
 		"moreBtn": "More",
 		"casesList": {
 			"1": {

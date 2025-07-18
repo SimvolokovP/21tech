@@ -38,16 +38,16 @@ export async function Hero() {
 						{t('cta')}
 					</a>
 					<button className='inline-flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-700 hover:text-black px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-gray-300'>
-						Посмотреть работы
+						{t('cta2')}
 					</button>
 				</div>
 
-				{/* Vercel-style декор */}
-				<div className='flex justify-center items-center gap-2 mt-16 opacity-40'>
+				
+				{/* <div className='flex justify-center items-center gap-2 mt-16 opacity-40'>
 					<div className='w-1 h-1 rounded-full bg-gray-400'></div>
 					<div className='w-1 h-1 rounded-full bg-violet-500'></div>
 					<div className='w-1 h-1 rounded-full bg-gray-400'></div>
-				</div>
+				</div>  */}
 			</div>
 		</section>
 	)
