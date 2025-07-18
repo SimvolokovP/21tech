@@ -13,7 +13,7 @@ export const ARTICLES: IArticle[] = [
     category: "telegram-bots",
     tags: ["telegram", "bot", "development", "python"],
     featured: true,
-    image: "/blog/telegram-bot-guide.jpg"
+    image: undefined
   },
   {
     id: "2",
@@ -27,7 +27,7 @@ export const ARTICLES: IArticle[] = [
     category: "mobile-apps",
     tags: ["telegram", "mini-apps", "web3", "future"],
     featured: true,
-    image: "/blog/mini-apps-future.jpg"
+    image: undefined
   },
   {
     id: "3",
@@ -41,7 +41,7 @@ export const ARTICLES: IArticle[] = [
     category: "ai-solutions",
     tags: ["ai", "business", "automation", "integration"],
     featured: false,
-    image: "/blog/ai-business.jpg"
+    image: undefined
   },
   {
     id: "4",
@@ -55,6 +55,6 @@ export const ARTICLES: IArticle[] = [
     category: "web-development",
     tags: ["web", "trends", "2025", "nextjs"],
     featured: false,
-    image: "/blog/web-trends-2025.jpg"
+    image: undefined
   }
 ];

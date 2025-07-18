@@ -13,29 +13,33 @@ export function BlogSection() {
   const latestArticles = ARTICLES.slice(0, 3);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      {/* Технологичная сетка */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
+    <section id="blog" className="w-full section-indent px-4 relative">
+      {/* Vercel-style фоновая сетка */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute inset-0" 
              style={{
                backgroundImage: `
-                 linear-gradient(rgba(124, 58, 237, 0.02) 1px, transparent 1px),
-                 linear-gradient(90deg, rgba(124, 58, 237, 0.02) 1px, transparent 1px)
+                 linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+                 linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px)
                `,
                backgroundSize: '40px 40px'
              }}>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Vercel-style заголовок */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-medium text-gray-700">
+            <div className="w-2 h-2 rounded-full bg-violet-500"></div>
+            {t('title')}
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">
             {t('latest')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto font-normal">
             {t('subtitle')}
           </p>
-          <div className="w-24 h-1 bg-blue-600 rounded mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -44,25 +48,11 @@ export function BlogSection() {
           ))}
         </div>
 
-        <div className="text-center">
-          <Link
-            href="/blog"
-            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-          >
-            {t('allArticles')}
-            <svg
-              className="ml-2 w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+        <div className="w-full flex justify-center mt-12">
+          <Link href="/blog">
+            <button className="inline-flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-700 hover:text-black px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 border border-gray-300">
+              {t('allArticles')}
+            </button>
           </Link>
         </div>
       </div>

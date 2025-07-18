@@ -18,80 +18,91 @@ export default async function BlogPage() {
   
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-white py-16 sm:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+      <div className="w-full section-indent px-4 relative">
+        {/* Vercel-style фоновая сетка */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute inset-0" 
+               style={{
+                 backgroundImage: `
+                   linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+                   linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px)
+                 `,
+                 backgroundSize: '40px 40px'
+               }}>
+          </div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Vercel-style заголовок */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-medium text-gray-700">
+              <div className="w-2 h-2 rounded-full bg-violet-500"></div>
+              {t('title')}
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 tracking-tight">
               {t('title')}
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-500 max-w-2xl mx-auto font-normal">
               {t('subtitle')}
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Featured Articles */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              {t('featured')}
-            </h2>
-            <div className="w-24 h-1 bg-blue-600 rounded"></div>
+          {/* Рекомендуемые статьи */}
+          <div className="mb-20">
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-black mb-4">
+                {t('featured')}
+              </h2>
+              <div className="w-24 h-1 bg-violet-600 rounded"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {ARTICLES.slice(0, 3).map((article: IArticle) => (
+                <ArticleCard key={article.slug} article={article} />
+              ))}
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ARTICLES.slice(0, 3).map((article: IArticle) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Latest Articles */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              {t('latest')}
-            </h2>
-            <div className="w-24 h-1 bg-blue-600 rounded"></div>
+          {/* Все статьи */}
+          <div className="mb-20">
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-black mb-4">
+                {t('allArticles')}
+              </h2>
+              <div className="w-24 h-1 bg-violet-600 rounded"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {ARTICLES.slice(3).map((article: IArticle) => (
+                <ArticleCard key={article.slug} article={article} />
+              ))}
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ARTICLES.slice(3).map((article: IArticle) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Categories Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Категории
-            </h2>
-            <div className="w-24 h-1 bg-blue-600 rounded"></div>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {Object.entries(t.raw('categories')).map(([key, value]) => (
-              <div
-                key={key}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 cursor-pointer hover:border-blue-200"
-              >
-                <h3 className="font-semibold text-gray-900 text-center">
-                  {value as string}
-                </h3>
-              </div>
-            ))}
+          {/* Категории */}
+          <div className="mb-20">
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-black mb-4">
+                Категории
+              </h2>
+              <div className="w-24 h-1 bg-violet-600 rounded"></div>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {Object.entries(t.raw('categories')).map(([key, value]) => (
+                <div
+                  key={key}
+                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200 cursor-pointer hover:border-violet-200 group"
+                >
+                  <h3 className="font-semibold text-black text-center group-hover:text-violet-600 transition-colors duration-200">
+                    {value as string}
+                  </h3>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
