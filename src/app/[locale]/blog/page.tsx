@@ -7,12 +7,13 @@ import { getTranslations } from 'next-intl/server'
 export async function generateMetadata({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
+	const { locale } = await params;
 	return {
-		title: params.locale === 'ru' ? 'Блог | 21scale' : 'Blog | 21scale',
+		title: locale === 'ru' ? 'Блог | 21scale' : 'Blog | 21scale',
 		description:
-			params.locale === 'ru'
+			locale === 'ru'
 				? 'Статьи о технологиях, разработке и цифровой трансформации'
 				: 'Articles about technology, development and digital transformation',
 	}

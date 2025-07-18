@@ -7,14 +7,15 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 interface ArticlePageProps {
-  params: {
+  params: Promise<{
     locale: string;
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
-  const article = ARTICLES.find(a => a.slug === params.slug);
+  const { slug } = await params;
+  const article = ARTICLES.find(a => a.slug === slug);
   
   if (!article) {
     return {
@@ -35,7 +36,8 @@ export function generateStaticParams() {
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
-  const article = ARTICLES.find(a => a.slug === params.slug);
+  const { slug, locale } = await params;
+  const article = ARTICLES.find(a => a.slug === slug);
   const t = await getTranslations('Blog');
   const tArticles = await getTranslations('Articles');
   
@@ -45,7 +47,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString(params.locale === 'ru' ? 'ru-RU' : 'en-US', {
+    return date.toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', {
       year: 'numeric',
       month: 'long', 
       day: 'numeric'
@@ -64,11 +66,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <div className="bg-gray-50 py-4 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href={`/${params.locale}`} className="hover:text-violet-600 transition-colors">
+            <Link href={`/${locale}`} className="hover:text-violet-600 transition-colors">
               Главная
             </Link>
             <span>/</span>
-            <Link href={`/${params.locale}/blog`} className="hover:text-violet-600 transition-colors">
+            <Link href={`/${locale}/blog`} className="hover:text-violet-600 transition-colors">
               {t('title')}
             </Link>
             <span>/</span>
@@ -193,7 +195,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 {relatedArticles.map((relatedArticle: IArticle) => (
                   <Link
                     key={relatedArticle.slug}
-                    href={`/${params.locale}/blog/${relatedArticle.slug}`}
+                    href={`/${locale}/blog/${relatedArticle.slug}`}
                     className="group"
                   >
                     <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 hover:border-violet-200">
