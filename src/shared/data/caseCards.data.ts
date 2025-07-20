@@ -60,7 +60,7 @@ export const CASE_CARDS: ICaseCard[] = [
     title: "Asian Halal",
     descr: "asian_halal_descr",
     type: "bot",
-    mainImage: `/DurgerKing.png`,
-    hoverImage: "/cases/1/hoverImage.png",
+    mainImage: `/cases/asianHalal/mainImage.png`,
+    hoverImage: "/cases/asianHalal/hoverImage.png",
   },
 ];
