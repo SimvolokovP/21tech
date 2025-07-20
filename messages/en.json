@@ -1,170 +1,174 @@
 {
-	"Error": {
-		"description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
-		"title": "Something went wrong!"
-	},
-	"MainPage": {
-		"description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes.",
-		"title": "next-intl example"
-	},
-	"LocaleLayout": {
-		"title": "21scale"
-	},
-	"LocaleSwitcher": {
-		"label": "Change language",
-		"locale": "{locale, select, ru {Russian} en {English} other {Unknown}}"
-	},
-	"Manifest": {
-		"name": "next-intl example"
-	},
-	"Navigation": {
-		"home": "Home",
-		"pathnames": "Pathnames"
-	},
-	"Header": {
-		"navigation": {
-			"cases": "Cases",
-      
-			"services": "Services",
-			"solutions": "Solutions",
-			"blog": "Blog",
-			"contacts": "Contact us"
-		},
-		"link": "Contact us"
-	},
-	"Hero": {
-		"title": "Time to automate your business",
-		"subtitle": "Businesses lose money due to inefficient processes. We help fix this: automate, implement AI, simplify work.",
-		"cta": "Contact us",
+  "Error": {
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "title": "Something went wrong!"
+  },
+  "MainPage": {
+    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes.",
+    "title": "next-intl example"
+  },
+  "LocaleLayout": {
+    "title": "21scale"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ru {Russian} en {English} other {Unknown}}"
+  },
+  "Manifest": {
+    "name": "next-intl example"
+  },
+  "Navigation": {
+    "home": "Home",
+    "pathnames": "Pathnames"
+  },
+  "Header": {
+    "navigation": {
+      "cases": "Cases",
+
+      "services": "Services",
+      "solutions": "Solutions",
+      "blog": "Blog",
+      "contacts": "Contact us"
+    },
+    "link": "Contact us"
+  },
+  "Hero": {
+    "title": "Time to automate your business",
+    "subtitle": "Businesses lose money due to inefficient processes. We help fix this: automate, implement AI, simplify work.",
+    "cta": "Contact us",
     "cta2": "Discuss your project"
-	},
-	"Services": {
-		"title": "Services",
-		"items": {
-			"0": "Development of automated business processes",
-			"1": "Implementation of AI and machine learning",
-			"2": "Custom IT solutions development",
-			"3": "Telegram bots and mini apps",
-			"4": "Solutions integration and automation",
-			"5": "Digital business transformation consulting"
-		}
-	},
-	"Contacts": {
-		"email": "hello@21scale.agency",
-		"telegram": "@twentyone_scale"
-	},
-	"ContactsForm": {
-		"title": "Let's discuss your project",
-		"subtitle": "Leave your contacts and we'll get back to you within a day.",
-		"or": "Or contact us directly:",
-		"button": "Submit",
-		"telegram": "Contact us on Telegram",
-		"fields": {
-			"name": "Your name",
-			"email": "Email",
-			"phone": "Phone",
-			"message": "Project description"
-		},
-		"placeholders": {
-			"name": "John Doe",
-			"email": "email@example.com",
-			"phone": "+1 123 456 7890",
-			"message": "Tell us about your task..."
-		},
-		"validation": {
-			"name": {
-				"min": "Name must be at least 2 characters."
-			},
-			"email": {
-				"invalid": "Please enter a valid email."
-			},
-			"phone": {
-				"invalid": "Invalid phone number."
-			},
-			"message": {
-				"min": "Message must be at least 10 characters."
-			},
-			"agree": {
-				"required": "You must agree to the privacy policy."
-			}
-		},
-		"agree": "I agree with the",
-		"policy": "privacy policy"
-	},
-	"Cases": {
+  },
+  "Services": {
+    "title": "Services",
+    "items": {
+      "0": "Development of automated business processes",
+      "1": "Implementation of AI and machine learning",
+      "2": "Custom IT solutions development",
+      "3": "Telegram bots and mini apps",
+      "4": "Solutions integration and automation",
+      "5": "Digital business transformation consulting"
+    }
+  },
+  "Contacts": {
+    "email": "hello@21scale.agency",
+    "telegram": "@twentyone_scale"
+  },
+  "ContactsForm": {
+    "title": "Let's discuss your project",
+    "subtitle": "Leave your contacts and we'll get back to you within a day.",
+    "or": "Or contact us directly:",
+    "button": "Submit",
+    "telegram": "Contact us on Telegram",
+    "fields": {
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Project description"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "email@example.com",
+      "phone": "+1 123 456 7890",
+      "message": "Tell us about your task..."
+    },
+    "validation": {
+      "name": {
+        "min": "Name must be at least 2 characters."
+      },
+      "email": {
+        "invalid": "Please enter a valid email."
+      },
+      "phone": {
+        "invalid": "Invalid phone number."
+      },
+      "message": {
+        "min": "Message must be at least 10 characters."
+      },
+      "agree": {
+        "required": "You must agree to the privacy policy."
+      }
+    },
+    "agree": "I agree with the",
+    "policy": "privacy policy"
+  },
+  "Cases": {
     "label": "Portfolio",
-		"title": "Implemented projects",
-		"subtitle": "",
+    "title": "Implemented projects",
+    "subtitle": "",
     "more": "Learn more",
-		"moreBtn": "More",
-		"casesList": {
-			"1": {
-				"title": "FinFlow",
-				"descr": "Creating a financial tracking application for income and expenses directly in Telegram. Telegram mini app"
-			},
-			"2": {
-				"title": "TapJumpers",
-				"descr": "Creating a tap-to-earn application in Telegram"
-			},
-			"3": {
-				"title": "DProxy",
-				"descr": "Creating a website and Telegram bot for mobile proxies"
-			},
-			"4": {
-				"title": "PredictPari",
-				"descr": "Creating an application for a betting company with predictions for the Club World Championship final. Users can vote for which team will win and view predictions from others and AI"
-			},
-			"5": {
-				"title": "Panini",
-				"descr": "Creating an application with cards, match predictions, mini-games, quizzes, and football team building"
-			},
-			"6": {
-				"title": "Burger King",
-				"descr": "Creating a template for restaurants in Telegram"
-			},
-			"7": {
-				"title": "Asian Halal",
-				"descr": "Case for a restaurant using our ready-made solution in Telegram"
-			}
-		}
-	},
-	"AllCases": {
-		"title": "Our realized projects",
-		"subtitle": ""
-	},
-	"Blog": {
-		"title": "Blog",
-		"subtitle": "Articles about technology, development and digital transformation",
-		"readMore": "Read More",
-		"readTime": "min read",
-		"author": "Author",
-		"publishedAt": "Published",
-		"category": "Category",
-		"tags": "Tags",
-		"featured": "Featured",
-		"latest": "Latest Articles",
-		"allArticles": "All Articles",
-		"noArticles": "No articles found",
-		"categories": {
-			"telegram-bots": "Telegram Bots",
-			"web-development": "Web Development",
-			"mobile-apps": "Mobile Apps",
-			"ai-solutions": "AI Solutions",
-			"tutorials": "Tutorials"
-		}
-	},
-	"Articles": {
-		"article_1_title": "Complete Guide to Creating Telegram Bots in 2025",
-		"article_1_excerpt": "Learn modern approaches to developing Telegram bots, from simple commands to complex business logic with AI integration.",
-		"article_1_content": "In this article, we'll explore the complete process of creating a modern Telegram bot...",
-		"article_2_title": "The Future of Telegram Mini Apps: New Business Opportunities",
-		"article_2_excerpt": "How Telegram Mini Apps are revolutionizing mobile development and opening new opportunities for startups.",
-		"article_2_content": "Telegram Mini Apps represent a new era in mobile application development...",
-		"article_3_title": "AI Integration in Business Processes: A Practical Guide",
-		"article_3_excerpt": "Step-by-step guide to implementing artificial intelligence in existing company business processes.",
-		"article_3_content": "Artificial intelligence is no longer a futuristic technology...",
-		"article_4_title": "Web Development Trends 2025: What Developers Need to Know",
-		"article_4_excerpt": "Overview of main trends and technologies in web development that will define the industry in 2025.",
-		"article_4_content": "2025 promises to be a pivotal year for web development..."
-	}
+    "moreBtn": "More",
+    "casesList": {
+      "0": {
+        "title": "Dark & Loud",
+        "descr": "A handy web app for scheduling car tinting and audio system installations. Quick booking, service selection, and online time slots."
+      },
+      "1": {
+        "title": "FinFlow",
+        "descr": "Creating a financial tracking application for income and expenses directly in Telegram. Telegram mini app"
+      },
+      "2": {
+        "title": "TapJumpers",
+        "descr": "Creating a tap-to-earn application in Telegram"
+      },
+      "3": {
+        "title": "DProxy",
+        "descr": "Creating a website and Telegram bot for mobile proxies"
+      },
+      "4": {
+        "title": "PredictPari",
+        "descr": "Creating an application for a betting company with predictions for the Club World Championship final. Users can vote for which team will win and view predictions from others and AI"
+      },
+      "5": {
+        "title": "Panini",
+        "descr": "Creating an application with cards, match predictions, mini-games, quizzes, and football team building"
+      },
+      "6": {
+        "title": "Burger King",
+        "descr": "Creating a template for restaurants in Telegram"
+      },
+      "7": {
+        "title": "Asian Halal",
+        "descr": "Case for a restaurant using our ready-made solution in Telegram"
+      }
+    }
+  },
+  "AllCases": {
+    "title": "Our realized projects",
+    "subtitle": ""
+  },
+  "Blog": {
+    "title": "Blog",
+    "subtitle": "Articles about technology, development and digital transformation",
+    "readMore": "Read More",
+    "readTime": "min read",
+    "author": "Author",
+    "publishedAt": "Published",
+    "category": "Category",
+    "tags": "Tags",
+    "featured": "Featured",
+    "latest": "Latest Articles",
+    "allArticles": "All Articles",
+    "noArticles": "No articles found",
+    "categories": {
+      "telegram-bots": "Telegram Bots",
+      "web-development": "Web Development",
+      "mobile-apps": "Mobile Apps",
+      "ai-solutions": "AI Solutions",
+      "tutorials": "Tutorials"
+    }
+  },
+  "Articles": {
+    "article_1_title": "Complete Guide to Creating Telegram Bots in 2025",
+    "article_1_excerpt": "Learn modern approaches to developing Telegram bots, from simple commands to complex business logic with AI integration.",
+    "article_1_content": "In this article, we'll explore the complete process of creating a modern Telegram bot...",
+    "article_2_title": "The Future of Telegram Mini Apps: New Business Opportunities",
+    "article_2_excerpt": "How Telegram Mini Apps are revolutionizing mobile development and opening new opportunities for startups.",
+    "article_2_content": "Telegram Mini Apps represent a new era in mobile application development...",
+    "article_3_title": "AI Integration in Business Processes: A Practical Guide",
+    "article_3_excerpt": "Step-by-step guide to implementing artificial intelligence in existing company business processes.",
+    "article_3_content": "Artificial intelligence is no longer a futuristic technology...",
+    "article_4_title": "Web Development Trends 2025: What Developers Need to Know",
+    "article_4_excerpt": "Overview of main trends and technologies in web development that will define the industry in 2025.",
+    "article_4_content": "2025 promises to be a pivotal year for web development..."
+  }
 }
