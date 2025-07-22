@@ -115,3 +115,7 @@ body.menu-open {
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }
+
+button, a {
+	@apply cursor-pointer;
+}

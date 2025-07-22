@@ -10,7 +10,7 @@ export function DesktopNav() {
 	const navigation = [
 		{ text: t('navigation.services'), href: '/services' },
 		{ text: t('navigation.cases'), href: '/cases' },
-		{ text: t('navigation.solutions'), href: '/solutions' },
+		// { text: t('navigation.solutions'), href: '/solutions' },
 		// { text: t('navigation.blog'), href: '/blog' },
 		{ text: t('navigation.contacts'), href: '/contact-us' },
 	]
