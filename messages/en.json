@@ -116,15 +116,15 @@
       },
       "4": {
         "title": "PredictPari",
-        "descr": "Creating an application for a betting company with predictions for the Club World Championship final. Users can vote for which team will win and view predictions from others and AI"
+        "descr": "Creating an AI application for the betting company Pari on predictions for the final of the Club World Championship"
       },
       "5": {
         "title": "Panini",
         "descr": "Creating an application with cards, match predictions, mini-games, quizzes, and football team building"
       },
       "6": {
-        "title": "Burger King",
-        "descr": "Creating a template for restaurants in Telegram"
+        "title": "Durger King App",
+        "descr": "Building an E-Commerce template for restaurants in Telegram. Durger King Clone App"
       },
       "7": {
         "title": "Asian Halal",

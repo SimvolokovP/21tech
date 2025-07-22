@@ -14,8 +14,8 @@ export const CASE_CARDS: ICaseCard[] = [
     title: "FinFlow",
     descr: "finflow_descr",
     type: "tma",
-    mainImage: `/finflow.jpg`,
-    hoverImage: "/cases/1/hoverImage.png",
+    mainImage: `/Frame 7.png`,
+    hoverImage: "/Frame 8.png",
   },
   {
     id: 2,
@@ -30,8 +30,8 @@ export const CASE_CARDS: ICaseCard[] = [
     title: "DProxy",
     descr: "dproxy_descr",
     type: "landing",
-    mainImage: `/dproxy-case.png`,
-    hoverImage: "/cases/1/hoverImage.png",
+    mainImage: `/Frame 9.png`,
+    hoverImage: "/Frame 9.png",
   },
   {
     id: 4,
